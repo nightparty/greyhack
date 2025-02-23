@@ -1,0 +1,102 @@
+help_text = "<color=#CCCCCC>Use help command for more info.</color>"
+help_document = "<color=#CCCCCC>help document</color>"
+invetory = "<color=#CCCCCC>invetory page</color>"
+character = "<color=#CCCCCC>character page</color>"
+shop = "<color=#CCCCCC>shop page</color>"
+skills = "<color=#CCCCCC>skills page</color>"
+
+CNAME = "Player Name"
+CCLASS = "Player Class"
+LV = 1
+HP = 100
+MP = 100
+STA = 100
+ATK = 100
+DEF = 100
+SPD = 100
+GC = 100
+VC = 100
+EHP = 100
+
+refresh = function()
+	globals.ui = ["|--------------|","|              |","|"+CNAME+" "*(14-CNAME.len)+"|","|GOLD: "+str(GC)+" "*(8-str(GC).len)+"|","|Level: "+str(LV)+" "*(7-str(LV).len)+"|","|HP: "+str(HP)+" "*(10-str(HP).len)+"|","|MP: "+str(MP)+" "*(10-str(MP).len)+"|","|STA: "+str(STA)+" "*(9-str(STA).len)+"|","|     MENU     |","|  help        |","|  inventory   |","|  stats       |","|  skills      |","|  shop        |","|     ENEMY    |"]
+	globals.walk = ["|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '.                           .'      |"+ui[5]+"\n"+"|        '.                       .'        |"+ui[6]+"\n"+"|          '. _________________ .'          |"+ui[7]+"\n"+"|            |                 |            |"+ui[0]+"\n"+"|          .'                   '.          |"+ui[8]+"\n"+"|        .'                       '.        |"+ui[9]+"\n"+"|      .'                           '.      |"+ui[10]+"\n"+"|    .'                               '.    |"+ui[11]+"\n"+"|  .'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '.                           .'      |"+ui[5]+"\n"+"|        '. _____________________ .'        |"+ui[6]+"\n"+"|          |                     |          |"+ui[7]+"\n"+"|          |                     |          |"+ui[0]+"\n"+"|          |                     |          |"+ui[8]+"\n"+"|        .'                       '.        |"+ui[9]+"\n"+"|      .'                           '.      |"+ui[10]+"\n"+"|    .'                               '.    |"+ui[11]+"\n"+"|  .'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '. _________________________ .'      |"+ui[5]+"\n"+"|        |                         |        |"+ui[6]+"\n"+"|        |                         |        |"+ui[7]+"\n"+"|        |                         |        |"+ui[0]+"\n"+"|        |                         |        |"+ui[8]+"\n"+"|        |                         |        |"+ui[9]+"\n"+"|      .'                           '.      |"+ui[10]+"\n"+"|    .'                               '.    |"+ui[11]+"\n"+"|  .'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '. _____________________________ .'    |"+ui[4]+"\n"+"|      |                             |      |"+ui[5]+"\n"+"|      |                             |      |"+ui[6]+"\n"+"|      |                             |      |"+ui[7]+"\n"+"|      |                             |      |"+ui[0]+"\n"+"|      |                             |      |"+ui[8]+"\n"+"|      |                             |      |"+ui[9	]+"\n"+"|      |                             |      |"+ui[10]+"\n"+"|    .'                               '.    |"+ui[11]+"\n"+"|  .'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '. _________________________________ .'  |"+ui[3]+"\n"+"|    |                                 |    |"+ui[4]+"\n"+"|    |                                 |    |"+ui[5]+"\n"+"|    |                                 |    |"+ui[6]+"\n"+"|    |                                 |    |"+ui[7]+"\n"+"|    |                                 |    |"+ui[0]+"\n"+"|    |                                 |    |"+ui[8]+"\n"+"|    |                                 |    |"+ui[9]+"\n"+"|    |                                 |    |"+ui[10]+"\n"+"|    |                                 |    |"+ui[11]+"\n"+"|  .'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'. _____________________________________ .'|"+ui[2]+"\n"+"|  |                                     |  |"+ui[3]+"\n"+"|  |                                     |  |"+ui[4]+"\n"+"|  |                                     |  |"+ui[5]+"\n"+"|  |                                     |  |"+ui[6]+"\n"+"|  |                                     |  |"+ui[7]+"\n"+"|  |                                     |  |"+ui[0]+"\n"+"|  |                                     |  |"+ui[8]+"\n"+"|  |                                     |  |"+ui[9]+"\n"+"|  |                                     |  |"+ui[10]+"\n"+"|  |                                     |  |"+ui[11]+"\n"+"|  |                                     |  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+""]
+	globals.door = ["|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '. _________________________ .'      |"+ui[5]+"\n"+"| ||'.   |                         |   .'|| |"+ui[6]+"\n"+"| ||  |  |                         |  |  || |"+ui[7]+"\n"+"| ||  :  |                         |  :  || |"+ui[0]+"\n"+"| |+0 |  |                         |  | 0+| |"+ui[8]+"\n"+"| ||  :  |                         |  :  || |"+ui[9]+"\n"+"| ||  |.'                           '.|  || |"+ui[10]+"\n"+"| || .'                               '. || |"+ui[11]+"\n"+"| |.'                                   '|| |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '. _________________________ .'      |"+ui[5]+"\n"+"|        |                         |   .'|| |"+ui[6]+"\n"+"|        |                         |  |  || |"+ui[7]+"\n"+"|        |                         |  :  || |"+ui[0]+"\n"+"|        |                         |  | 0+| |"+ui[8]+"\n"+"|        |                         |  :  || |"+ui[9]+"\n"+"|      .'                           '.|  || |"+ui[10]+"\n"+"|    .'                               '. || |"+ui[11]+"\n"+"|  .'                                   '|| |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'.                                       .'|"+ui[2]+"\n"+"|  '.                                   .'  |"+ui[3]+"\n"+"|    '.                               .'    |"+ui[4]+"\n"+"|      '. _________________________ .'      |"+ui[5]+"\n"+"| ||'.   |                         |        |"+ui[6]+"\n"+"| ||  |  |                         |        |"+ui[7]+"\n"+"| ||  :  |                         |        |"+ui[0]+"\n"+"| |+0 |  |                         |        |"+ui[8]+"\n"+"| ||  :  |                         |        |"+ui[9]+"\n"+"| ||  |.'                           '.      |"+ui[10]+"\n"+"| || .'                               '.    |"+ui[11]+"\n"+"| |.'                                   '.  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'. _____________________________________ .'|"+ui[2]+"\n"+"|  |                                     |  |"+ui[3]+"\n"+"|  |                                     |  |"+ui[4]+"\n"+"|  |                                     |  |"+ui[5]+"\n"+"|  |              _________              |  |"+ui[6]+"\n"+"|  |             |         |             |  |"+ui[7]+"\n"+"|  |             :         |             |  |"+ui[0]+"\n"+"|  |             |         |             |  |"+ui[8]+"\n"+"|  |             |       O |             |  |"+ui[9]+"\n"+"|  |             |         |             |  |"+ui[10]+"\n"+"|  |             :         |             |  |"+ui[11]+"\n"+"|  |_____________|_________|_____________|  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+"","|===========================================|"+ui[0]+"\n"+"|'. _____________________________________ .'|"+ui[2]+"\n"+"|  |                                     |  |"+ui[3]+"\n"+"|  |                                     |  |"+ui[4]+"\n"+"|  |                                     |  |"+ui[5]+"\n"+"|  |              _________              |  |"+ui[6]+"\n"+"|  |             |         |             |  |"+ui[7]+"\n"+"|  |             |         :             |  |"+ui[0]+"\n"+"|  |             |         |             |  |"+ui[8]+"\n"+"|  |             | O       |             |  |"+ui[9]+"\n"+"|  |             |         |             |  |"+ui[10]+"\n"+"|  |             |         :             |  |"+ui[11]+"\n"+"|  |_____________|_________|_____________|  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+""]
+	globals.gate = "|===========================================|"+ui[0]+"\n"+"|'.  ___________________________________  .'|"+ui[2]+"\n"+"|  ||                | |                ||  |"+ui[3]+"\n"+"|  ||                | |                ||  |"+ui[4]+"\n"+"|  ||                | |                ||  |"+ui[5]+"\n"+"|  ||                | |                ||  |"+ui[6]+"\n"+"|  ||                | |                ||  |"+ui[7]+"\n"+"|  ||               O| |O               ||  |"+ui[0]+"\n"+"|  ||                | |                ||  |"+ui[8]+"\n"+"|  ||                | |                ||  |"+ui[9]+"\n"+"|  ||                | |                ||  |"+ui[10]+"\n"+"|  ||                | |                ||  |"+ui[11]+"\n"+"|  ||________________| |________________||  |"+ui[12]+"\n"+"|.'                                       '.|"+ui[13]+"\n"+"|===========================================|"+ui[0]+""
+	globals.rat = "|===========================================|"+ui[0]+"\n"+"|                                           |"+ui[2]+"\n"+"|                                           |"+ui[3]+"\n"+"|                                           |"+ui[4]+"\n"+"|                                           |"+ui[5]+"\n"+"|                                           |"+ui[6]+"\n"+"|               _, .---.__c--.              |"+ui[7]+"\n"+"|              (__( )_._( )_`_>             |"+ui[0]+"\n"+"|                  `~~'  `~~'               |"+ui[1]+"\n"+"|                                           |"+ui[14]+"\n"+"|                                           |"+ui[1]+"\n"+"|                                           |"+"|HP: "+str(EHP)+" "*(10-str(EHP).len)+"|"+"\n"+"|                                           |"+ui[1]+"\n"+"|                                           |"+ui[1]+"\n"+"|===========================================|"+ui[0]+""		
+end function
+
+turn = function()
+	newdice = floor(rnd*10)
+	if newdice <= 3 then screen = door[0]
+	if newdice > 3 and newdice <= 6 then screen = door[1]
+	if newdice > 6 then screen = door[2]
+	clear_screen;print(screen)
+	while true
+		cmd = user_input("(u)p,(l)eft,(r)ight >")
+		if cmd.lower.indexOf(["u","up","l","left","r","right"]) == null then print(screen)
+		clear_screen
+		if cmd.lower == "up" or cmd.lower == "u" then break
+		if cmd.lower == "right" or cmd.lower == "r" then
+			if newdice > 6 then
+				print("There is no door on that side...")
+				while true;cmd = user_input("(u)p,(l)eft,(r)ight >");if cmd.lower == "left" or cmd.lower == "l" then break;end while
+			end if
+			print(door[3]);wait(1);clear_screen;break
+		end if
+		if cmd.lower == "left" or cmd.lower == "l" then
+			if newdice > 3 and newdice <= 6 then
+				print("There is no door on that side...")
+				while true;cmd = user_input("(u)p,(l)eft,(r)ight >");if cmd.lower == "right" or cmd.lower == "r" then break;end while
+			end if
+			print(door[4]);wait(1);clear_screen;break
+		end if
+	end while
+end function
+
+encounter = function(EHP,EATK,EDEF)
+	while true
+		clear_screen
+		refresh
+		print(rat)
+		cmd = user_input("(h)it,(g)uard,(f)lee,(p)otion >")
+		if cmd.lower == "h" or cmd.lower == "hit" then
+			EHP = EHP - (ATK - EDEF);globals.STA = globals.STA - 5
+			if EHP < 1 then;globals.GC = globals.GC + 100;break;end if
+				globals.HP = globals.HP - (EATK - DEF)
+				if globals.HP < 1 then globals.HP = 100
+			end if
+			if cmd.lower == "g" or cmd.lower == "guard" then
+				globals.HP = (globals.HP - (EATK - DEF))+10
+				if globals.HP > 100 then globals.HP = 100
+			end if
+			if cmd.lower == "p" or cmd.lower == "potion" then
+				globals.HP = 100;globals.STA = 100;globals.MP = 100;globals.HP = globals.HP - (EATK - DEF)
+			end if
+			if cmd.lower == "f" or cmd.lower == "flee" then break
+		end while
+	end function
+
+	boss = function()
+		print(gate)
+	end function
+
+	while true
+		refresh
+		dice = floor(rnd*10)
+		for animation in walk
+			print(animation)
+			wait(0.5)
+			clear_screen
+			if animation == walk[3] and dice < 3 then
+				turn;break
+			end if
+			if animation == walk[5] and dice >= 3 and dice <= 7 then
+				encounter(100,110,75);break
+			end if
+			if animation == walk[5] and dice == 9 then
+				//boss;break
+			end if
+		end for
+	end while
+	
